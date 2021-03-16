@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title> website</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="head">
+<a href="index.php" style="cursor: pointer" ><img src="img/name.png"></a>
+<div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder=" ძებნა" name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+  <button id="log" onclick="openForm()">შესვლა</button>
+</div>
+<div class="form-popup" id="myForm" action="php\sign-in.php">
+        <form class="form-container" action="">
+                <h1>შესვლა სისტემაში</h1>
+                <input type="text" placeholder="სახელი" name="username">
+                <input type="password" placeholder="პაროლი" name="psw">
+                <p class="msg none">Lorem ipsum dolor sit amet.</p>
+                <button type="submit" class="btn1 login-btn" value="submit">შესვლა</button>
+                <button type="button" class="btn1-cancel" onclick="closeForm()"><i class="fa fa-times" aria-hidden="true"></i></button>
+                არ გაქ აქქაუნტი? დარეგისტრირდი - <a href="register.php">რეგისტრაცია</a>
+            </form>
+        </div>
+<div class="nav">    
+<ul>
+  <li><a href="index.php">მთავარი</a></li>
+  <li><a href="komp.php">კომპიუტერის აქსესუარები</a></li>
+  <li><a href="konsolgames.php">კონსოლების თამაშები</a></li>
+  <li><a href="test.php">სხვა პროდუქცია</a></li>
+  <li><a href="kompania.php">ჩვენს შესახებ</a></li>
+</ul>
+</div>
+<?php include "phpElements/slider.php";?>
+<style>
+.h1{
+    font-size:30px;
+    margin:10px;
+    padding: 5px;
+}
+.text{
+    
+    border:2px solid grey;
+    margin:10px;
+    margin-left:10%;
+    margin-right:10%;
+}
+.text p{
+  padding:5px;
+  margin:5px;
+  font-size:18px;
+}
+</style>
+<div class="text">
+<p>კომპანია COOLTHINGS ფუნქციონირებს 2020 წლიდან და ამ ხნის განმავლობაში ჩამოყალიბდა, როგორც თამაშებისა და კომპიუტერული აქსესუარების საიმედო მიმწოდებელი.</p>
+<p>ყოველდღე ჩვენ ვცდილობთ გავაუმჯობესოთ ჩვენი მომსახურების ხარისხი და შევაფასოთ ჩვენი მომხმარებლის ნდობა. პროდუქტის კატალოგის მუდმივად გაზრით,</p>
+<p>კომპანია COOLTHINGS მტკიცედ იკავებს თავის ნიშას კონსოლის თამაშებისა და კომპიუტერული აქსეუარების გაყიდვის  ბაზარზე.</p>
+<div class="h1">ფასების პოლიტიკა</div>
+<p>დაბალი ფასების პოლიტიკა COOLTHINGS კომპანიაში მიზნად ისახავს ახალი მომხმარებლების მოზიდვას და მუდმივი მომხმარებლების შენარჩუნებას.</p>
+<p>ჩვენ არ ვიზიდავთ კლიენტებს ფსევდო ფასდაკლებით და "აქციებით", ჩვენ გთავაზობთ დაუყოვნებლივ დაბალ ფასებს, რომელთა უარის თქმა რთულია.</p> 
+</div>
+
+
+
+<?php include "phpElements/footer.php";?>
+
+
+<script src="js/filter.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

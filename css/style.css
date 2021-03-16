@@ -1,0 +1,237 @@
+/*slider*/
+.wrapper
+{
+  width: 80%;
+  position: relative;
+  margin: auto;
+}
+.slides-item
+{
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+  border: none !important;
+  box-shadow: none !important;
+}
+.slideText {
+  position: absolute;
+  color: #fff;
+  font-size: 35px;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+.wrapper .prev, .wrapper .next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 23px;
+  transition: 0.6s ease;
+  border-radius: 0 10px 10px 0;
+  background-color:white;
+
+}
+.wrapper .next {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+.wrapper .prev:hover,
+.wrapper .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color:white;
+}
+.dots-block
+{
+  position: absolute;
+  left: 50%;
+  top:450px;
+  bottom:5px;
+  transform: translateX(-50%);
+}
+.dots-item
+{
+  cursor:pointer;
+  display: inline-block;
+  width:20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 7px;
+  background-color:#63636e;
+  transition: background-color 0.6s ease;
+}
+.dots-item:last-child{
+  margin:0;
+}
+.dots-item:hover{
+  background-color: ivory;
+}
+.active{
+  background:white;
+}
+
+.wrapper .slides {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+
+/*-----form----*/
+.form-popup {
+  display: none;
+  position: fixed;
+  top:100px;
+  margin-left:40%;
+  border: 3px solid #06103b;
+  z-index: 9;
+}
+
+@media screen and (max-width: 600px)
+{
+  .form-popup
+  {
+    margin:auto;
+  }
+}
+.form-container h1
+{
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  max-width: 400px;
+  padding: 10px;
+  background-color:rgb(24,33,52);
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.form-container input[type=text], .form-container input[type=password], .form-container input[type=password_confirm] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: 1px solid darkgrey;
+  background: #f1f1f1;
+}
+
+
+.form-container input[type=text]:focus, .form-container input[type=password], .form-container input[type=password_confirm]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.form-container .btn1 {
+  background-color: #fac907;
+  color:#100433;
+  padding: 10px 12px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+@media screen and (max-width:750px)
+{
+  .form-container .btn1
+  {
+   opacity:1;
+  }
+}
+
+
+.btn1-cancel {
+  background-color: #fe0606;
+  margin:2px;
+  position:absolute;
+  padding: 5px;
+  right:2px;
+  top:2px;
+  border:none;
+  color:white;
+}
+
+.msg {
+  border: 2px solid #ffa908;
+  border-radius: 3px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.none {
+  display: none;
+}
+
+.logout {
+  color: #b7625c;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.form-container a
+{
+  color:#eb386b;
+}
+
+
+
+
+.footer{
+  width: 100%;
+  display: flex;
+  clear: both;
+  background-color:#333;
+}
+.column {
+  width: 30%;
+  margin:20px;
+  color:white;
+}
+.column a{
+  padding: 20px;
+  text-decoration: none;
+  color:white;
+}
+
+.zag
+{
+  font-size:20px;
+  color:white;
+}
+.datec{
+  font-size:25px;
+  color:white;
+  margin-top:70px;
+}
+.a{
+  margin-left:15%;
+}
+a .fa
+{
+  margin-right:10px;
+}
+a .fa:hover
+{
+  color:yellow;
+}
+.datec .fa{
+  color:white;
+  padding:5px;
+  margin-bottom:5px;
+}
+

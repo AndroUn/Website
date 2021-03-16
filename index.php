@@ -1,0 +1,187 @@
+<html>
+<head>
+    <title>website</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/imagebox.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="head">
+<a href="index.php" style="cursor: pointer" ><img src="img/name.png"></a>
+<div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder=" ძებნა" name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+  <button id="log" onclick="openForm()">შესვლა</button>
+</div>
+<div class="form-popup" id="myForm" action="php\sign-in.php">
+        <form class="form-container" action="">
+                <h1>შესვლა სისტემაში</h1>
+                <input type="text" placeholder="სახელი" name="username">
+                <input type="password" placeholder="პაროლი" name="psw">
+                <p class="msg none">Lorem ipsum dolor sit amet.</p>
+                <button type="submit" class="btn1 login-btn" value="submit">შესვლა</button>
+                <button type="button" class="btn1-cancel" onclick="closeForm()"><i class="fa fa-times" aria-hidden="true"></i></button>
+                არ გაქ აქქაუნტი? დარეგისტრირდი - <a href="register.php">რეგისტრაცია</a>
+            </form>
+        </div>
+<div class="nav">    
+<ul>
+  <li><a href="index.php">მთავარი</a></li>
+  <li><a href="komp.php">კომპიუტერის აქსესუარები</a></li>
+  <li><a href="konsolgames.php">კონსოლების თამაშები</a></li>
+  <li><a href="test.php">სხვა პროდუქცია</a></li>
+  <li><a href="kompania.php">ჩვენს შესახებ</a></li>
+</ul>
+</div>
+<?php include "phpElements/slider.php";?>
+
+
+<div class="archevani">პოპულარული</div>
+<hr style="width:80%">
+
+<style>
+.imb{
+  display:none;
+}
+.show {
+  display: block;
+}
+.btn {
+  border: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+.btn:first-of-type{
+  margin-left:15%;
+}
+
+
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+</style>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> ყველა</button>
+  <button class="btn" onclick="filterSelection('games')"> კონსოლის თამაშები</button>
+  <button class="btn" onclick="filterSelection('komp')"> კომპიუტერის აქსესუარები</button>
+  <button class="btn" onclick="filterSelection('sxva')"> სხვა პროდუქცია</button>
+</div>
+
+<div class="row">
+<a href="#">
+<div class="imb games">
+<img src="img/spidey.jpg">
+<div class="desc"><a href="#href">Spider-Man: Miles Morales</a></div>
+<div class="price">170₾</div>
+<div class="under-text">PS5 ვერსია</div>
+<div class="card-footer">
+<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+</div>
+</div>
+<a>
+
+<a href="#">
+<div class="imb games">
+<img src="img/ac.png">
+<div class="desc"><a href="#href">Assassin's Creed: Valhalla</a></div>
+<div class="price">140₾</div>
+<div class="under-text">PS4 ვერსია</div>
+<div class="card-footer">
+<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+</div>
+</div>
+</a>
+
+<a href="#">
+<div class="imb komp">
+<img src="img\razer-death-adder-gallery-29.png">
+<div class="desc"><a href="#href">Razer Death Adder </a></div>
+<div class="price">120₾</div>
+<div class="under-text">მაუსი Razer</div>
+<div class="card-footer">
+<small class="text-muted">&#9733; &#9733; &#9733; &#9734; &#9734;</small>
+</div>
+</div>
+</a>
+
+<a href="#">
+<div class="imb sxva">
+<img src="img/3.jpg">
+<div class="desc"><a href="#href">Batman დასადგამი</a></div>
+<div class="price">40₾</div>
+<div class="under-text">კონტროლლერის დასადგამი</div>
+<div class="card-footer">
+<small class="text-muted">&#9733; &#9733; &#9733; &#9734; &#9734;</small>
+</div>
+</div>
+</a>
+</div>
+
+
+<div class="row">
+<a href="#">
+<div class="imb komp">
+<img src="img/razer_headset.jpg">
+<div class="desc"><a href="#href">Razer Kraken Gaming </a></div>
+<div class="price">260₾</div>
+<div class="under-text">ყურსასმენები</div>
+<div class="card-footer">
+<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+</div>
+</div>
+<a>
+
+<a href="#">
+<div class="imb sxva">
+<img src="img\sekiroaf.jpg">
+<div class="desc"><a href="#href">Sekiro Action Figure</a></div>
+<div class="price">100₾</div>
+<div class="under-text">საკალექციო ფიგურა</div>
+<div class="card-footer">
+<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+</div>
+</div>
+</a>
+<a href="#">
+<div class="imb games">
+<img src="img\ds.jpg">
+<div class="desc"><a href="#href">Demon Souls</a></div>
+<div class="price">170₾</div>
+<div class="under-text">PS5 დისკი</div>
+<div class="card-footer">
+<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+</div>
+</div>
+</a>
+<a href="#">
+<div class="imb games">
+<img src="img\ghostof.jpg">
+<div class="desc"><a href="#href">Ghost of Thushima</a></div>
+<div class="price">100₾</div>
+<div class="under-text">PS4 ვერსია</div>
+<div class="card-footer">
+<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+</div>
+</div>
+</a>
+</div>
+
+
+<?php include "phpElements/footer.php";?>
+
+
+<script src="js/filter.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

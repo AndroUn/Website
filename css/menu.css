@@ -1,0 +1,119 @@
+/********header********/
+.head{
+  display:flex;
+  margin-left:5%;
+  padding:30px;
+}
+.head a img
+{
+  width:250px;
+}
+.head #log{
+  margin-left:23%;
+  font-size:20px;
+  height:40px;
+  margin-top:10px;
+  border:none;
+  padding: 6px 10px;
+  color:white;
+  background-color:#8f26fb;
+  border-radius:6px;
+}
+.head #log:hover{
+  background-color:#f70c3d;
+  margin-top:10px;
+}
+.profile
+{
+  margin-left:23%;
+  padding: 6px 10px;
+}
+.head .search-container{
+  margin-left:20%;
+  margin-top:5px;
+}
+.head input[type=text] {
+  width: 500px;
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 20px;
+  border: 1px solid #63636e;
+}
+
+.head .search-container button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  background: #ddd;
+  font-size: 21px;
+  border: none;
+  cursor: pointer;
+}
+
+.head .search-container button:hover {
+  background: #ccc;
+  border:1px solid #63636e;
+}
+
+@media screen and (max-width: 600px) {
+  .head .search-container {
+    float: none;
+  }
+  .head a, .head input[type=text], .head .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .head input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+
+
+
+/*menu*/
+.nav ul {
+    list-style-type: none;
+    margin: 2px;
+    padding: 0;
+    margin-left:10%;
+    width:80%;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    font-size:20px;
+  }
+  
+  .nav li {
+    float: left;
+  }
+  .nav li {
+    float: left;
+    border-right:1px solid #bbb;
+  }
+  
+  .nav li:last-child {
+    border-right: none;
+  }
+  .nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 17px 65px;
+    text-decoration: none;
+  }
+  
+  .nav li a:hover {
+    background-color: #111;
+  }
+
+
+
+
+
+  
